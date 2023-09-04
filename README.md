@@ -1,5 +1,6 @@
 # thrusql
-Docker image to access German emission data from thru.de
+
+Docker image to access German emission data from thru.de.
 
 Build:
 ```
@@ -38,6 +39,13 @@ Result:
 name
 RWE Power AG - Kraftwerk Neurath
 ```
+
+## data
+
+The German environmental agency (Umweltbundesamt) publishes emission data about
+facilities in Germany on the web page [thru.de](https://thru.de/). The data is available
+in sqlite format, the Dockerfile published here allows converting that data to MySQL and
+accessing it either via SQL commands directly or via phpMyAdmin.
 
 ## about
 
