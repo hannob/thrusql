@@ -12,13 +12,12 @@ Run:
 docker run -p 3306:3306 -p 80:80 thru
 ```
 
-This will open a web server with phpMyAdmin on port 80 and a mysql server on port 3306.
-
-Username and password for the mysql server: thru/thru
+This will open a web server with phpMyAdmin on port 80 and a MySQL / MariaDB server on
+port 3306 (Username/password: thru/thru).
 
 Example usage:
 
-We want to know who is the biggest CO₂ polluter in Germany:
+We want to know who the biggest CO₂ polluter in Germany is:
 ```
 echo "SELECT facility_id FROM releases WHERE substance_name='Carbon dioxide (CO2)' AND year='2021' ORDER BY annual_load DESC limit 1;"|mysql -u thru -h localhost -P 3306 -p thru
 ```
@@ -44,11 +43,10 @@ RWE Power AG - Kraftwerk Neurath
 
 The German environmental agency (Umweltbundesamt) publishes emission data about
 facilities in Germany on the web page [thru.de](https://thru.de/). The data is available
-in sqlite format, the Dockerfile published here allows converting that data to MySQL and
-accessing it either via SQL commands directly or via phpMyAdmin.
+in SQLite format. The Dockerfile published here allows converting that data to MySQL and
+accessing it via SQL commands directly or via phpMyAdmin.
 
 ## about
 
-This Dockerfile was written by [Hanno Böck](https://hboeck.de/). If you like this, you
-may want to check out my [newsletter on industrial decarbonization](
-https://industrydecarbonization.com/).
+This Dockerfile was written by [Hanno Böck](https://hboeck.de/). You may want to check
+out my [newsletter on industrial decarbonization](https://industrydecarbonization.com/).
