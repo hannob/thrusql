@@ -4,7 +4,7 @@ Docker image to access German emission data from thru.de.
 
 Build:
 ```
-docker build -t thru .
+docker build . -t thru
 ```
 
 Run:
