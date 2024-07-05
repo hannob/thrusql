@@ -25,8 +25,8 @@ RUN mkdir /var/run/mysqld
 RUN chown mysql:mysql /var/run/mysqld
 RUN sed -e 's:^bind-address:#bind-address:g' -i /etc/mysql/mariadb.conf.d/50-server.cnf
 
-RUN wget https://thru.de/fileadmin/SITE_MASTER/content/Dokumente/Downloads/PRTR_Sqlite_Datenbanken/PRTR_20221213_en.zip
-RUN unzip PRTR_20221213_en.zip
+RUN wget https://thru.de/wp-content/uploads/2024/06/PRTR_20231120_en.zip
+RUN unzip PRTR_20231120_en.zip
 
 ADD mprep.sh /mprep.sh
 RUN chmod 755 /mprep.sh
