@@ -19,18 +19,18 @@ Example usage:
 
 We want to know who the biggest CO₂ polluter in Germany is:
 ```
-echo "SELECT facility_id FROM releases WHERE substance_name='Carbon dioxide (CO2)' AND year='2021' ORDER BY annual_load DESC limit 1;"|mysql -u thru -h localhost -P 3306 -p thru
+echo "SELECT facility_id FROM releases WHERE pollutant_name='Carbon dioxide (CO2)' AND year='2021' ORDER BY annual_load DESC limit 1;"|mariadb --skip-ssl -u thru -h localhost -P 3306 -p thru
 ```
 
 Result:
 ```
 facility_id
-30132
+78073
 ```
 
-Who is 30132?
+Who is 78073?
 ```
-echo "SELECT name FROM facilities WHERE id=73799"|mysql -u thru -h localhost -P 3306 -p thru
+echo "SELECT name FROM facilities WHERE id=78073"|mariadb --skip-ssl -u thru -h localhost -P 3306 -p thru
 ```
 
 Result:

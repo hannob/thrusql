@@ -16,6 +16,7 @@ echo "CREATE DATABASE thru;" | mysql -u root
 echo "CREATE USER 'thru'@'%' IDENTIFIED BY '$PW';" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON thru.* TO 'thru'@'%';" | mysql -u root
 
-sqlite3mysql -f prtr_en.db -d thru -u thru --mysql-password thru
+sqlite3mysql -f prtr_2024_en.db -d thru -u thru --mysql-password thru
 
+echo "ALTER TABLE thru.facilities ADD PRIMARY KEY (id);" | mysql -u root
 echo "ALTER TABLE thru.releases ADD FOREIGN KEY (facility_id) REFERENCES facilities(id);" | mysql -u root
