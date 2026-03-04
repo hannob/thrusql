@@ -1,4 +1,6 @@
-FROM debian:bookworm
+FROM debian:trixie
+
+ENV PHPMYADMIN_VERSION="5.2.3"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -14,10 +16,10 @@ RUN apt-get -y install apache2 \
 
 RUN pip install sqlite3-to-mysql --break-system-packages
 
-RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.tar.xz
+RUN wget https://files.phpmyadmin.net/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages.tar.xz
 
 RUN rm /var/www/html/index.html
-RUN tar --strip-components=1 -xf phpMyAdmin-5.2.1-all-languages.tar.xz -C /var/www/html
+RUN tar --strip-components=1 -xf phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages.tar.xz -C /var/www/html
 RUN mkdir /var/www/html/tmp
 RUN chown www-data:www-data /var/www/html/tmp
 
