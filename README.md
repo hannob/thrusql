@@ -48,5 +48,14 @@ accessing it via SQL commands directly or via phpMyAdmin.
 
 ## about
 
-This Dockerfile was written by [Hanno Böck](https://hboeck.de/). You may want to check
-out my [newsletter on industrial decarbonization](https://industrydecarbonization.com/).
+This Dockerfile was written by [Hanno Böck](https://hboeck.de/). You can find a similar
+project for [European emission data here](https://github.com/decarbonizenews/ghgsql).
+
+You may also want to check:
+
+* [Errors and Inconsistencies in European Emission Data (Industry Decarbonization
+  Newsletter, Dec 2025)](
+  https://industrydecarbonization.com/news/errors-and-inconsistencies-in-european-emission-data.html)
+* [ Greenhouse Gas Emission Data - Public, difficult to access, and not always correct
+  (video recording of presentation at #39C3, Dec 2025)](
+  https://media.ccc.de/v/39c3-greenhouse-gas-emission-data-public-difficult-to-access-and-not-always-correct)
